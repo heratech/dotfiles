@@ -17,13 +17,13 @@ call plug#begin()
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'airblade/vim-gitgutter'
-	  Plug 'MarcWeber/vim-addon-mw-utils'
-  Plug 'tomtom/tlib_vim'
-  Plug 'garbas/vim-snipmate'
+	Plug 'MarcWeber/vim-addon-mw-utils'
+	Plug 'tomtom/tlib_vim'
+	Plug 'garbas/vim-snipmate'
 	Plug 'honza/vim-snippets'
 	Plug 'sjl/gundo.vim'
 	Plug 'mhinz/vim-startify'
-	Plugin 'flazz/vim-colorschemes'
+	Plug 'flazz/vim-colorschemes'
 	"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	"Plug 'junegunn/fzf.vim'
 call plug#end()
