@@ -1,0 +1,24 @@
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+#zstyle :compinstall filename '/home/junaid/.zshrc'
+
+#autoload -Uz compinit
+#compinit
+
+# End of lines added by compinstall
+
+# Appends every command to the history file once it is executed
+setopt inc_append_history
+# Reloads the history whenever you use it
+setopt share_history
+
+zstyle ':completion:*' menu select
+# activate approximate completion, but only after regular completion (_complete)
+zstyle ':completion:::::' completer _complete _approximate
+# limit to 3 errors
+zstyle ':completion:*:approximate:*' max-errors 3
+# or to have a better heuristic, by allowing one error per 3 character typed
+# zstyle ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX+$#SUFFIX)/3 )) numeric )'
+setopt auto_cd
