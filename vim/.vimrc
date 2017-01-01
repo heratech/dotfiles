@@ -11,7 +11,7 @@ call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'majutsushi/tagbar'
 	Plug 'vim-syntastic/syntastic'
-	Plug 'Shougo/vimproc'
+	Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 	Plug 'Shougo/unite.vim'
 	Plug 'Shougo/neocomplete.vim'
 	Plug 'terryma/vim-multiple-cursors'
@@ -24,13 +24,19 @@ call plug#begin()
 	Plug 'sjl/gundo.vim'
 	Plug 'mhinz/vim-startify'
 	Plug 'flazz/vim-colorschemes'
-	"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-	"Plug 'junegunn/fzf.vim'
+	Plug 'lucidstack/ctrlp-mpc.vim'
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	Plug 'junegunn/fzf.vim'
+	"Plug 'AndreaOrru/fzf-mopidy-spotify.vim'
+	Plug 'heratech/fzf-mopidy-spotify.vim'
+	Plug 'tpope/vim-dispatch'
 call plug#end()
 "Set line number stuff
 let mapleader="\<Space>"
 set number
 set relativenumber
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir', 'tmux', 'mpc']
+nnoremap <Leader>m :CtrlPMpc<CR>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsListSnippets="<f3>"
