@@ -14,6 +14,7 @@ zplug "plugins/composer", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/vagrant", from:oh-my-zsh
 zplug "plugins/archlinux", from:oh-my-zsh
+zplug "plugins/taskwarrior", from:oh-my-zsh
 #zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # Can manage local plugins

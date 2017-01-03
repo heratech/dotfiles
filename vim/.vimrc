@@ -30,6 +30,7 @@ call plug#begin()
 	"Plug 'AndreaOrru/fzf-mopidy-spotify.vim'
 	Plug 'heratech/fzf-mopidy-spotify.vim'
 	Plug 'tpope/vim-dispatch'
+	Plug 'blindFS/vim-taskwarrior'
 call plug#end()
 "Set line number stuff
 let mapleader="\<Space>"
