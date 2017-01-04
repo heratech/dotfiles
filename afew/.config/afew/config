@@ -1,10 +1,9 @@
 # This is the default filter chain
 [SpamFilter]
 #[ClassifyingFilter]
-[KillThreadsFilter]
+# [KillThreadsFilter]
 [ListMailsFilter]
 [FolderNameFilter]
 folder_blacklist=INBOX/
 folder_transforms = Junk:spam INBOX:inbox
 [ArchiveSentMailsFilter]
-[InboxFilter]
