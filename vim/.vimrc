@@ -113,7 +113,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 set pastetoggle=<F2>
-set mouse=a
+"set mouse=a
 
 nnoremap ; :
 let g:ctrlp_show_hidden = 0
