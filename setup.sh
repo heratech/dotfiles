@@ -13,3 +13,6 @@ pacman -S stow
 pacman -S elinks
 yaourt -S afew-git
 pacman -S notmuch
+pacman -S dmenu
+pacman -S nitrogen
+pacman -S compton
