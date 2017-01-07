@@ -43,5 +43,5 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 source .zshrc.local
-
+export PATH=~/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
