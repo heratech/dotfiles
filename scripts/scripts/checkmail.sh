@@ -1,4 +1,4 @@
 #!/bin/sh
-mbsync -Va >> ~/scripts/log.txt
+mbsync wiseserve-quick >> ~/scripts/log.txt
 notmuch new >> ~/scripts/log.txt
 afew --tag --new >> ~/scripts/log.txt
