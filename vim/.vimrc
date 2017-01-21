@@ -78,7 +78,11 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nnoremap <Leader>o :Files<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader><Leader>n :MpcNext<CR>
+nnoremap <Leader><Leader>b :MpcPrev<CR>
+nnoremap <Leader><Leader>p :MpcToggle<CR>
 nmap <Leader><Leader> V
+
 "hide buffers, dont close
 set hidden
 set nowrap
