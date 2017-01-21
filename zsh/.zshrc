@@ -43,7 +43,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 alias qtbrowser='qutebrowser --backend=webengine'
-alias vim='vim -S'
 source .zshrc.local
 export PATH=~/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
