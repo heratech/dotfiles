@@ -19,6 +19,18 @@ zstyle ':completion:*' menu select
 zstyle ':completion:::::' completer _complete _approximate
 # limit to 3 errors
 zstyle ':completion:*:approximate:*' max-errors 3
+#zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # or to have a better heuristic, by allowing one error per 3 character typed
 # zstyle ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX+$#SUFFIX)/3 )) numeric )'
 setopt auto_cd
+setopt extendedglob
+#nice completion with colors
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+#correct commands (got to git)
+setopt correctall
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+
+
