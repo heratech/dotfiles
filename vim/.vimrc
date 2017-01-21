@@ -104,7 +104,7 @@ if has('autocmd')
 endif
 
 if &t_Co >= 256 || has("gui_running")
-	colorscheme molokai
+	colorscheme solarized
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -133,3 +133,15 @@ let g:airline_theme='molokai'
 autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 let g:neocomplete#enable_at_startup = 1
 nmap <F8> :TagbarToggle<CR>
+" Damian Conway's Die Blinkënmatchen: highlight matches
+nnoremap <silent> n n:call HLNext(0.1)<cr>
+nnoremap <silent> N N:call HLNext(0.1)<cr>
+
+function! HLNext (blinktime)
+  let target_pat = '\c\%#'.@/
+  let ring = matchadd('ErrorMsg', target_pat, 101)
+  redraw
+  exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+  call matchdelete(ring)
+  redraw
+endfunction
