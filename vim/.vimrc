@@ -1,13 +1,15 @@
 call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-	Plug 'ctrlpvim/ctrlp.vim'
+	"Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'wellle/targets.vim'
 	Plug 'tomtom/tcomment_vim'
 	Plug 'tpope/vim-surround'
 	Plug 'severin-lemaignan/vim-minimap'
 	Plug 'tpope/vim-obsession'
 	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-unimpaired'
+	Plug 'justinmk/vim-sneak'
 	Plug 'scrooloose/nerdtree'
 	Plug 'majutsushi/tagbar'
 	Plug 'vim-syntastic/syntastic'
@@ -15,7 +17,8 @@ call plug#begin()
 	Plug 'Shougo/unite.vim'
 	Plug 'Shougo/neocomplete.vim'
 	Plug 'terryma/vim-multiple-cursors'
-	Plug 'easymotion/vim-easymotion'
+"	Plug 'easymotion/vim-easymotion' "removed because the letter differences
+"	hurt my brain.. Using sneak instead
 	Plug 'airblade/vim-gitgutter'
 	Plug 'MarcWeber/vim-addon-mw-utils'
 	Plug 'tomtom/tlib_vim'
@@ -24,7 +27,7 @@ call plug#begin()
 	Plug 'sjl/gundo.vim'
 	Plug 'mhinz/vim-startify'
 	Plug 'flazz/vim-colorschemes'
-	Plug 'lucidstack/ctrlp-mpc.vim'
+	"Plug 'lucidstack/ctrlp-mpc.vim'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
 	"Plug 'AndreaOrru/fzf-mopidy-spotify.vim'
@@ -32,12 +35,14 @@ call plug#begin()
 	Plug 'tpope/vim-dispatch'
 	Plug 'blindFS/vim-taskwarrior'
 call plug#end()
+"Clever sneak for sneak plugin. Press s again to go to next match
+let g:sneak#s_next = 1
 "Set line number stuff
 let mapleader="\<Space>"
 set number
 set relativenumber
-let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir', 'tmux', 'mpc']
-nnoremap <Leader>m :CtrlPMpc<CR>
+" let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir', 'tmux', 'mpc']
+" nnoremap <Leader>m :CtrlPMpc<CR>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsListSnippets="<f3>"
@@ -67,11 +72,11 @@ function! Multiple_cursors_after()
 endfunction
 
 
-nnoremap <silent> <leader><space> :Files<CR>
+"nnoremap <silent> <leader><space> :Files<CR>
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>o :Files<CR>
 nnoremap <Leader>w :w<CR>
 nmap <Leader><Leader> V
 "hide buffers, dont close
@@ -116,14 +121,15 @@ set pastetoggle=<F2>
 "set mouse=a
 
 nnoremap ; :
-let g:ctrlp_show_hidden = 0
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-if executable('ag')
-	  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
+" let g:ctrlp_show_hidden = 0
+" let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+" if executable('ag')
+	  " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" endif
 cmap w!! w !sudo tee % >/dev/null
 "autocmd vimenter * NERDTree
 map <C-e> :NERDTreeToggle<CR>
+map <C-p> :Files<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:airline#extensions#tabline#enabled = 1
