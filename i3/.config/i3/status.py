@@ -14,6 +14,7 @@ status.register("clock",
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
 status.register("load")
+status.register("uptime")
 
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
@@ -68,6 +69,7 @@ status.register("network",
     interface="enp3s0",
     format_up="{v4cidr}",)
 
+status.register("external_ip")
 # Note: requires both netifaces and basiciw (for essid and quality)
 # status.register("network",
 #     interface="wlan0",
@@ -100,6 +102,10 @@ status.register("mpd",
 status.register("mail",
         backends=[notmuchmail.Notmuch(db_path="/home/sham/Mail/wiseserve")],
         format="P {unread}",
+        )
+
+status.register("taskwarrior",
+        format="Task: {next} {urgent} {ready}",
         )
 
 status.register(
