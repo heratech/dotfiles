@@ -1,0 +1,10 @@
+: 1485043741:0;pip install colour psutil basiciw
+: 1485043754:0;sudo pip install colour psutil basiciw
+: 1485044820:0;pip install notmuch
+: 1485044823:0;sudo pip install notmuch
+: 1485049819:0;sudo pip install json
+: 1485052132:0;sudo pip install geoip
+: 1485078403:0;pip install taskwarrior-inthe.am
+: 1485078419:0;sudo pip install taskwarrior-inthe.am
+: 1485131965:0;cat ~/.histfile | grep install
+: 1485131975:0;cat ~/.histfile | grep install > pipinstall.txt

@@ -1,0 +1,40 @@
+pacaur -Ss cower
+pacaur -Ss i3
+pacaur -S compton-git
+pacaur -Ss qutebro
+pacaur -S qutebrowser-git
+pacaur -Ss libharf
+pacaur -Ss harf
+pacaur -Ss qtwebkit
+pacaur -Ss vocal
+pacaur -S vocal
+pacaur -S vocal-git
+pacaur -Ss mopidy
+pacaur -S mopidy-spotify-wweb
+pacaur -S mopidy-spotify-web
+pacaur -Ss mopidy
+pacaur -S mopidy-mopify
+: 1485042249:0;pacaur -S vit
+: 1485043217:0;pacaur -Ss i3py
+: 1485043224:0;pacaur -Ss i3pystatus-git
+: 1485043229:0;pacaur -S i3pystatus-git
+: 1485043232:0;pacaur -S i3pystatus-git
+: 1485043542:0;pacaur -Ss colour
+: 1485043552:0;pacaur -Ss netifaces
+: 1485043589:0;pacaur -Ss colour
+: 1485043646:0;pacaur -S pip
+: 1485043674:0;pacaur -Ss pyp
+: 1485043704:0;pacaur -Ss pip
+: 1485044779:0;pacaur -Ss notmuch
+: 1485052308:0;pacaur -Ss clerk
+: 1485052319:0;pacaur -S clerk
+: 1485052482:0;pacaur -Ss column
+: 1485052516:0;pacaur -Ss rofi
+: 1485053035:0;pacaur -Ss rofi
+: 1485053043:0;pacaur -Ss rofi-git
+: 1485053047:0;pacaur -S rofi-git
+: 1485106343:0;pacaur -S mopidy-scrobbler
+: 1485113526:0;pacaur -Ss rompr
+: 1485113600:0;pacaur -S rompr
+: 1485113626:0;pacaur -S rompr
+: 1485115858:0;pacaur -Ss dig
