@@ -34,6 +34,7 @@ call plug#begin()
 	Plug 'heratech/fzf-mopidy-spotify.vim'
 	Plug 'tpope/vim-dispatch'
 	Plug 'blindFS/vim-taskwarrior'
+	Plug 'gizmo385/spotify.vim'
 call plug#end()
 "Clever sneak for sneak plugin. Press s again to go to next match
 let g:sneak#s_next = 1
@@ -122,8 +123,12 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 set pastetoggle=<F2>
-"set mouse=a
 
+map <F9> :SpotifyPreviousSong<CR>
+map <F10> :SpotifyPauseUnpause<CR>
+map <F12> :SpotifyNextSong<CR>
+
+"set mouse=aAA
 nnoremap ; :
 " let g:ctrlp_show_hidden = 0
 " let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'

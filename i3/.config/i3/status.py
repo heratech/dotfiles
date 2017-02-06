@@ -88,6 +88,7 @@ status.register("disk",
 status.register("pulseaudio",
     format="♪{volume}",)
 
+status.register("spotify")
 # Shows mpd status
 # Format:
 # Cloud connected▶Reroute to Remain

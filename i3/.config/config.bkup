@@ -25,12 +25,7 @@ font pango:monospace 8
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
-#Scratchpaad
-# scratchpad
-bindsym $mod+m move scratchpad
-bindsym $mod+o scratchpad show
-#switch back to previous work space by pressing current workspace key.
-workspace_auto_back_and_forth yes
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -87,28 +82,6 @@ workspace $ws6 output $monitor_two
 workspace $ws7 output $monitor_three
 workspace $ws8 output $monitor_three
 workspace $ws9 output $monitor_three
-
-assign [class="Spotify"] $ws7
-for_window [class="Spotify"] move to workspace $ws7
-assign [class="TeamSpeak 3"] $ws9
-#assign [class="VirtualBox"] $ws3
-#for_window [class="VirtualBox"] floating enable
-for_window [class="Steam"] floating enable, border none
-for_window [instance="Rocksmith2014.exe"] floating enable, border none
-for_window [instance="Rocksmith2014.exe"] move to workspace $ws5
-# https://github.com/ValveSoftware/steam-for-linux/issues/1040
-for_window [class="^Steam$" title="^Friends$"] floating enable
-for_window [class="^Steam$" title="Steam - News"] floating enable
-for_window [class="^Steam$" title=".* - Chat"] floating enable
-for_window [class="^Steam$" title="^Settings$"] floating enable
-for_window [class="^Steam$" title=".* - event started"] floating enable
-for_window [class="^Steam$" title=".* CD key"] floating enable
-for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
-for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
-for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
-for_window [title="^Steam Keyboard$"] floating enable
-#for_window [class="Spotify"] move to $ws7
-
 # start dmenu (a program launcher)
 bindsym $mod+r exec dmenu_run
 # There also is the (new) i4-dmenu-desktop which only displays applications
